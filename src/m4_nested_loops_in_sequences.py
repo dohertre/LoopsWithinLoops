@@ -176,8 +176,8 @@ def sum_numbers(seq_seq):
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     for j in range(len(seq_seq)):
-        seq_seq[j] = seq_seq[j] * (j + 1)
-
+        for k in range(len(seq_seq[j])):
+            seq_seq[j][k] = seq_seq[j][k] * (j + 1)
 
 def run_test_print_characters():
     """ Tests the    print_characters    function. """
