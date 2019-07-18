@@ -122,8 +122,8 @@ def triangle_of_stars(r):
     # ------------------------------------------------------------------
     for k in range(r):
         for j in range(k + 1):
-            print('*', end='')
-    print()
+            print("*", end='')
+        print()
 
 
 def run_test_decreasing_exclamation_marks():
@@ -158,7 +158,7 @@ def decreasing_exclamation_marks(m, n):
     Precondition:  m and n are positive integers with m >= n.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -166,10 +166,10 @@ def decreasing_exclamation_marks(m, n):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-    for k in range(m):
-        for j in range(-k + n):
-            print('!', end='')
-    print()
+    for k in range(n):
+        for j in range(m - k):
+            print("!", end='')
+        print()
 
 def run_test_alternating_brackets():
     """ Tests the    alternating_brackets    function. """
