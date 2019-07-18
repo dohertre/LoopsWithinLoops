@@ -264,6 +264,7 @@ def triangle_same_number_in_each_row(r):
             print(k, end='')
         print()
 
+
 def run_test_triangle_all_numbers_in_each_row():
     """ Tests the    triangle_all_numbers_in_each_row    function. """
     print()
@@ -297,7 +298,7 @@ def triangle_all_numbers_in_each_row(r):
     Precondition:  r is a non-negative integer.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -305,6 +306,10 @@ def triangle_all_numbers_in_each_row(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for j in range(r):
+        for k in range(1, j + 2):
+            print(k, end='')
+        print()
 
 
 # ----------------------------------------------------------------------
