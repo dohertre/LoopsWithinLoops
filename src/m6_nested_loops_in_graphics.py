@@ -80,7 +80,7 @@ def draw_L(window, circle, r, c):
     and m and n are small, positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
     original_x = circle.center.x
@@ -90,9 +90,9 @@ def draw_L(window, circle, r, c):
     x = original_x
     y = original_y
     for i in range(r):
-        for j in range(c):
+        for j in range(3):
             new_circle = rg.Circle(rg.Point(x, y), radius)
-            new_circle
+            new_circle.fill_color = circle.fill_color
             new_circle.attach_to(window)
             window.render(0.1)
 
@@ -100,6 +100,31 @@ def draw_L(window, circle, r, c):
 
         y = y + 2 * radius  # Move y down, for the next row of circles
         x = original_x  # Reset x to the left-edge, for the next row
+    for l in range(3):
+        for m in range(3):
+            new_circle = rg.Circle(rg.Point(x, y), radius)
+            new_circle.fill_color = circle.fill_color
+            new_circle.attach_to(window)
+            window.render(0.1)
+
+            x = x + (2 * radius)  # Move x to the right, for next circle
+
+        y = y + 2 * radius  # Move y down, for the next row of circles
+        x = original_x  # Reset x to the left-edge, for the next r
+
+    for k in range(3):
+        for h in range(c + 3):
+            new_circle = rg.Circle(rg.Point(x, y), radius)
+            new_circle.fill_color = circle.fill_color
+            new_circle.attach_to(window)
+            window.render(0.1)
+
+            x = x + (2 * radius)
+        y = y + 2 * radius
+        x = original_x
+
+
+
 
 
 def run_test_draw_wall_on_right():
